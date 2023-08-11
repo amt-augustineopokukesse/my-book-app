@@ -15,7 +15,9 @@
         <li>
             {{ i + 1 }}
             <img [src]="book.image" [alt]="book.name" width="100px" />
-            {{ book.name }} by {{ book.author }}
+            <!-- Application of pipes below (eg | titlecase) -->
+            {{ book.name | titlecase }} by {{ book.author | titlecase }}
+            <p>{{ book.amount | currency }}</p>
         </li>
     </ng-container>
     
