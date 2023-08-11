@@ -26,6 +26,18 @@ export class BooksComponent {
       author: 'david thomas',
       image: 'https://m.media-amazon.com/images/I/51A8l+FxFNL.jpg',
       amount: 800,
+    },
+    {
+      name: 'Modern Software Engineering',
+      author: 'David Farley',
+      image: 'https://m.media-amazon.com/images/I/51YZ7o1Y9JL.jpg',
+      amount: 450,
+    },
+    {
+      name: 'The Kubernetes Book',
+      author: 'Nigel Poulton',
+      image: 'https://m.media-amazon.com/images/I/41sovme3JIL.jpg',
+      amount: 400,
     }
   ]
 
