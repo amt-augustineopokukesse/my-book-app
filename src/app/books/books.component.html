@@ -1,24 +1,11 @@
 <h2>Programming Books List!</h2>
 
-<button (click)="this.isShowing = !this.isShowing;">
-    <!-- <span *ngIf="isShowing">Hide Books</span>
-    <span *ngIf="!isShowing">Show Books</span> -->
-    <!-- If you dont want the span tags you can use the ngContainer -->
-    <ng-container *ngIf="isShowing">Hide Books</ng-container>
-    <ng-container *ngIf="!isShowing">Show Books</ng-container>
-</button>
 <!-- <input type="text" [(ngModel)]="myName"/> -->
 <!-- <div>{{myName}}</div> -->
 
 <ul *ngIf="isShowing">
     <ng-container *ngFor="let book of books, let i=index">
-        <li class="book">
-            <p class="sno">{{ i + 1 }}</p>
-            <img [src]="book.image" [alt]="book.name" width="100px" />
-            <!-- Application of pipes below (eg | titlecase) -->
-            <p class="title">{{ book.name | titlecase }} by {{ book.author | titlecase }}</p>
-            <p class="currency">{{ book.amount | currency }}</p>
-        </li>
+        <app-book (bookEmitter)="addToCard($event)" [book]="book"></app-book>
     </ng-container>
     
     <!-- <li>

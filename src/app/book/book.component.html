@@ -1,0 +1,7 @@
+<li class="book">
+    <img [src]="book.image" [alt]="book.name" width="100px" />
+    <!-- Application of pipes below (eg | titlecase) -->
+    <p class="title">{{ book.name | titlecase }} by {{ book.author | titlecase }}</p>
+    <p class="currency">{{ book.amount | currency }}</p>
+    <button (click)="addToCard()">Add to Card</button>
+</li>

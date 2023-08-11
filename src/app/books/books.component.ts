@@ -1,11 +1,5 @@
 import { Component } from '@angular/core';
-
-interface Book {
-  name: string;
-  author: string;
-  image: string;
-  amount: number
-}
+import { Book } from '../types/Book';
 
 @Component({
   selector: 'app-books',
@@ -43,8 +37,10 @@ export class BooksComponent {
 
   isShowing: boolean = true;
 
-  // toggleBooks() {
-  //   this.isShowing = !this.isShowing;
-  // }
+  card: Book[] = [];
+
+  addToCard(book: any) {
+    console.log(book)
+  }
   
 }
